@@ -1,4 +1,4 @@
-## Learn how to use this package
+git## Learn how to use this package
 https://github.com/AlexandreBartie/Encrypt/wiki/How-to-Use
 
 ## Package Informations

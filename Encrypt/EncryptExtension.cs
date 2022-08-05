@@ -19,9 +19,16 @@ public static class EncryptExtension
         foreach (var t in hashBytes)
             sb.Append(t.ToString("X2"));
 
-        //return $"https://www.gravatar.com/avatar/{sb.ToString().ToLower()}";  
-
         return sb.ToString().ToLower();
+
+    }
+
+    public static string ToGravatar(this string email, int size = 80)
+    {
+        if (string.IsNullOrEmpty(email))
+            return string.Empty;
+
+        return $"https://www.gravatar.com/avatar/{email.ToEncrypt()}?s={size}";  
 
     }
 
